@@ -1,0 +1,40 @@
+<section>
+  <p class="center super-callout">Community funded developer infrastructure</p>
+
+  <p>Ruby Together is a grassroots initiative commited to supporting the critical Ruby infrastructure you rely on: Bundler, RubyGems, and other shared tools.</p>
+
+  <p>
+    Join companies like
+    <%= @companies.map { |company, url| link_to(company, url) }.to_sentence.html_safe %>;
+    individuals like
+    <%= @individuals.map { |individual| content_tag(:strong, individual) }.to_sentence.html_safe %>;
+    plus <%= link_to "many others", members_path %> supporting the Ruby ecosystem.
+  </p>
+</section>
+
+<section>
+  <h3>Our goal</h3>
+
+  <ul>
+    <li>Your financial backing allows Ruby Together to pay expert, professional developers to work on improving <%= link_to "critical infrastructure projects", roadmap_path %>.</li>
+    <li>The Ruby Together <%= link_to "board of directors", team_path %>, elected by members, selects the most impactful projects to fund.</li>
+    <li>Ruby Together publishes <%= link_to "monthly updates", news_index_path %> showing progress and our proven results.</li>
+  </ul>
+</section>
+
+<%= render "progress_so_far" %>
+
+<p class="center super-callout">Let's improve Ruby, together!</p>
+
+<%= render "join" %>
+
+<%= render "funding_levels" %>
+
+<section class="clearfix group">
+  <blockquote>
+    <p class="quote">The more contributors can live off their open-source work, the more they'll be able to devote to that work and the better their software will be for everyone. This is why we've been contributing funds to the open-source infrastructure we rely on.</p>
+    <p class="attribution">— Andreas Fuchs, Stripe</p>
+  </blockquote>
+</section>
+
+<%= render "join" %>

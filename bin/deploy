@@ -1,0 +1,22 @@
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+if [[ -z "$1" ]]; then
+  echo "Usage: $0 [ENVIRONMENT]"
+  exit 1
+fi
+
+"bin/$1" push
+
+case $1 in
+"production")
+  echo "Purging Fastly cache for $1..."
+  sleep 5
+  "bin/$1" surrogate bin/rake fastly:purge
+  ;;
+"staging")
+  echo "Migrating database..."
+  "bin/$1" surrogate bin/rake db:migrate
+  ;;
+esac

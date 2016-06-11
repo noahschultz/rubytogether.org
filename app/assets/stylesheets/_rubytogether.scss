@@ -1,0 +1,41 @@
+@import "colors";
+
+%text {
+  color: $dark_blue;
+  font-family: "Campton", "Verdana", sans-serif;
+}
+
+%body-text {
+  @extend %text;
+  font-size: 20px;
+}
+
+body {
+  @extend %body-text;
+  background-color: $blue;
+}
+
+h1 {
+  font-size: 42px;
+  margin: 0;
+  text-transform: lowercase;
+}
+
+h2 {
+  font-size: 36px;
+  text-transform: lowercase;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+a {
+  @extend %text;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+li {
+  margin-bottom: 0.5em;
+}

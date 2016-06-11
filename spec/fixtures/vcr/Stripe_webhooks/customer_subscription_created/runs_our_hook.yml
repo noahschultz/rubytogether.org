@@ -1,0 +1,3188 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/events/evt_15nY3IAcWgwn5pBtisl4M4d6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.1 p85 (2015-02-26)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy.local 14.1.0 Darwin Kernel Version 14.1.0: Thu Feb 26 19:26:47 PST 2015;
+        root:xnu-2782.10.73~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 03 Apr 2015 16:57:33 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1193'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_IOsm64DgEEPQkdRQ
+      Stripe-Version:
+      - '2015-02-18'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "evt_15nY3IAcWgwn5pBtisl4M4d6",
+          "created": 1428080032,
+          "livemode": false,
+          "type": "customer.subscription.created",
+          "data": {
+            "object": {
+              "id": "sub_5zX7ha6aVZ6Xeh",
+              "plan": {
+                "interval": "month",
+                "name": "Ruby Together Individual Membership",
+                "created": 1425204514,
+                "amount": 4000,
+                "currency": "usd",
+                "id": "individual",
+                "object": "plan",
+                "livemode": false,
+                "interval_count": 1,
+                "trial_period_days": null,
+                "metadata": {},
+                "statement_descriptor": null
+              },
+              "object": "subscription",
+              "start": 1428080032,
+              "status": "active",
+              "customer": "cus_5zX7jk6DxkTfzh",
+              "cancel_at_period_end": false,
+              "current_period_start": 1428080032,
+              "current_period_end": 1430672032,
+              "ended_at": null,
+              "trial_start": null,
+              "trial_end": null,
+              "canceled_at": null,
+              "quantity": 1,
+              "application_fee_percent": null,
+              "discount": null,
+              "tax_percent": null,
+              "metadata": {}
+            }
+          },
+          "object": "event",
+          "pending_webhooks": 0,
+          "request": "iar_5zX7MhAJ6RJnbJ",
+          "api_version": "2015-02-18"
+        }
+    http_version: 
+  recorded_at: Fri, 03 Apr 2015 16:57:33 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=friend
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.1 p85 (2015-02-26)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy.local 14.1.0 Darwin Kernel Version 14.1.0: Thu Feb 26 19:26:47 PST 2015;
+        root:xnu-2782.10.73~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 03 Apr 2015 16:57:34 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '10547'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_lz7yQTjFUcXOJzgb
+      Stripe-Version:
+      - '2015-02-18'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "total_count": 1,
+          "has_more": false,
+          "url": "/v1/customers",
+          "data": [
+            {
+              "object": "customer",
+              "created": 1426914712,
+              "id": "cus_5uTrwi73ORufop",
+              "livemode": false,
+              "description": null,
+              "email": "mail@arko.net",
+              "delinquent": false,
+              "metadata": {},
+              "subscriptions": {
+                "object": "list",
+                "total_count": 8,
+                "has_more": false,
+                "url": "/v1/customers/cus_5uTrwi73ORufop/subscriptions",
+                "data": [
+                  {
+                    "id": "sub_5zWY0bCk9P63qI",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Together Corporate Membership",
+                      "created": 1425204514,
+                      "amount": 80000,
+                      "currency": "usd",
+                      "id": "corporate",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1428077942,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1428077942,
+                    "current_period_end": 1430669942,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_5v8MTFDMkj3FZd",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Friends of Ruby Together",
+                      "created": 1426914345,
+                      "amount": 1000,
+                      "currency": "usd",
+                      "id": "friend",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1427065398,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1427065398,
+                    "current_period_end": 1429743798,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_5v8LR3bFp7Kkqb",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Together Individual Membership",
+                      "created": 1425204514,
+                      "amount": 4000,
+                      "currency": "usd",
+                      "id": "individual",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1427065330,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1427065330,
+                    "current_period_end": 1429743730,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_5uULtZdPpqWk1a",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Friends of Ruby Together",
+                      "created": 1426914345,
+                      "amount": 1000,
+                      "currency": "usd",
+                      "id": "friend",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1426916515,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1426916515,
+                    "current_period_end": 1429594915,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_5uUEOSs0JaL0Mw",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Friends of Ruby Together",
+                      "created": 1426914345,
+                      "amount": 1000,
+                      "currency": "usd",
+                      "id": "friend",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1426916109,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1426916109,
+                    "current_period_end": 1429594509,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_5uUCbKXgg5PEN9",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Friends of Ruby Together",
+                      "created": 1426914345,
+                      "amount": 1000,
+                      "currency": "usd",
+                      "id": "friend",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1426915972,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1426915972,
+                    "current_period_end": 1429594372,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_5uTusaTPgBKGOI",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Friends of Ruby Together",
+                      "created": 1426914345,
+                      "amount": 1000,
+                      "currency": "usd",
+                      "id": "friend",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1426914865,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1426914865,
+                    "current_period_end": 1429593265,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_5uTrNVqcsc8Xgx",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Friends of Ruby Together",
+                      "created": 1426914345,
+                      "amount": 1000,
+                      "currency": "usd",
+                      "id": "friend",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1426914713,
+                    "status": "active",
+                    "customer": "cus_5uTrwi73ORufop",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1426914713,
+                    "current_period_end": 1429593113,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "discount": null,
+              "account_balance": 0,
+              "currency": "usd",
+              "sources": {
+                "object": "list",
+                "total_count": 1,
+                "has_more": false,
+                "url": "/v1/customers/cus_5uTrwi73ORufop/sources",
+                "data": [
+                  {
+                    "id": "card_15nXVUAcWgwn5pBto7joC0j5",
+                    "object": "card",
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "funding": "credit",
+                    "exp_month": 2,
+                    "exp_year": 2022,
+                    "fingerprint": "Jus3vECqxH1Ctmdh",
+                    "country": "US",
+                    "name": "mail@arko.net",
+                    "address_line1": null,
+                    "address_line2": null,
+                    "address_city": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_country": null,
+                    "cvc_check": null,
+                    "address_line1_check": null,
+                    "address_zip_check": null,
+                    "dynamic_last4": null,
+                    "metadata": {},
+                    "customer": "cus_5uTrwi73ORufop"
+                  }
+                ]
+              },
+              "default_source": "card_15nXVUAcWgwn5pBto7joC0j5"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Fri, 03 Apr 2015 16:57:34 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=individual
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.1 p85 (2015-02-26)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy.local 14.1.0 Darwin Kernel Version 14.1.0: Thu Feb 26 19:26:47 PST 2015;
+        root:xnu-2782.10.73~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 03 Apr 2015 16:57:35 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2800'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_F3nsINrvZYj3j9le
+      Stripe-Version:
+      - '2015-02-18'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "total_count": 3,
+          "has_more": true,
+          "url": "/v1/customers",
+          "data": [
+            {
+              "object": "customer",
+              "created": 1428080030,
+              "id": "cus_5zX7jk6DxkTfzh",
+              "livemode": false,
+              "description": null,
+              "email": "alice@example.com",
+              "delinquent": false,
+              "metadata": {},
+              "subscriptions": {
+                "object": "list",
+                "total_count": 1,
+                "has_more": false,
+                "url": "/v1/customers/cus_5zX7jk6DxkTfzh/subscriptions",
+                "data": [
+                  {
+                    "id": "sub_5zX7ha6aVZ6Xeh",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Together Individual Membership",
+                      "created": 1425204514,
+                      "amount": 4000,
+                      "currency": "usd",
+                      "id": "individual",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1428080032,
+                    "status": "active",
+                    "customer": "cus_5zX7jk6DxkTfzh",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1428080032,
+                    "current_period_end": 1430672032,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "discount": null,
+              "account_balance": 0,
+              "currency": "usd",
+              "sources": {
+                "object": "list",
+                "total_count": 1,
+                "has_more": false,
+                "url": "/v1/customers/cus_5zX7jk6DxkTfzh/sources",
+                "data": [
+                  {
+                    "id": "card_15nY3CAcWgwn5pBtwYqmzfec",
+                    "object": "card",
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "funding": "credit",
+                    "exp_month": 2,
+                    "exp_year": 2022,
+                    "fingerprint": "Jus3vECqxH1Ctmdh",
+                    "country": "US",
+                    "name": "alice@example.com",
+                    "address_line1": null,
+                    "address_line2": null,
+                    "address_city": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_country": null,
+                    "cvc_check": "pass",
+                    "address_line1_check": null,
+                    "address_zip_check": null,
+                    "dynamic_last4": null,
+                    "metadata": {},
+                    "customer": "cus_5zX7jk6DxkTfzh"
+                  }
+                ]
+              },
+              "default_source": "card_15nY3CAcWgwn5pBtwYqmzfec"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Fri, 03 Apr 2015 16:57:35 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.1 p85 (2015-02-26)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy.local 14.1.0 Darwin Kernel Version 14.1.0: Thu Feb 26 19:26:47 PST 2015;
+        root:xnu-2782.10.73~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 03 Apr 2015 16:57:36 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2791'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_FY0FKYgyLzMMxhnd
+      Stripe-Version:
+      - '2015-02-18'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "total_count": 4,
+          "has_more": true,
+          "url": "/v1/customers",
+          "data": [
+            {
+              "object": "customer",
+              "created": 1428079716,
+              "id": "cus_5zX2RXpPOoKiT5",
+              "livemode": false,
+              "description": null,
+              "email": "mail@arko.net",
+              "delinquent": false,
+              "metadata": {},
+              "subscriptions": {
+                "object": "list",
+                "total_count": 1,
+                "has_more": false,
+                "url": "/v1/customers/cus_5zX2RXpPOoKiT5/subscriptions",
+                "data": [
+                  {
+                    "id": "sub_5zX2NUj04Yrn46",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Together Corporate Membership",
+                      "created": 1425204514,
+                      "amount": 80000,
+                      "currency": "usd",
+                      "id": "corporate",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1428079717,
+                    "status": "active",
+                    "customer": "cus_5zX2RXpPOoKiT5",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1428079717,
+                    "current_period_end": 1430671717,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "discount": null,
+              "account_balance": 0,
+              "currency": "usd",
+              "sources": {
+                "object": "list",
+                "total_count": 1,
+                "has_more": false,
+                "url": "/v1/customers/cus_5zX2RXpPOoKiT5/sources",
+                "data": [
+                  {
+                    "id": "card_15nXy8AcWgwn5pBt0PJgsQVk",
+                    "object": "card",
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "funding": "credit",
+                    "exp_month": 2,
+                    "exp_year": 2022,
+                    "fingerprint": "Jus3vECqxH1Ctmdh",
+                    "country": "US",
+                    "name": "mail@arko.net",
+                    "address_line1": null,
+                    "address_line2": null,
+                    "address_city": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_country": null,
+                    "cvc_check": "pass",
+                    "address_line1_check": null,
+                    "address_zip_check": null,
+                    "dynamic_last4": null,
+                    "metadata": {},
+                    "customer": "cus_5zX2RXpPOoKiT5"
+                  }
+                ]
+              },
+              "default_source": "card_15nXy8AcWgwn5pBt0PJgsQVk"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Fri, 03 Apr 2015 16:57:35 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_topaz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.2 p95 (2015-04-13)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy-2.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015;
+        root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 30 Jun 2015 03:32:40 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_6WI4PzovYWBNJa
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "total_count": 0,
+          "has_more": false,
+          "url": "/v1/customers",
+          "data": []
+        }
+    http_version: 
+  recorded_at: Tue, 30 Jun 2015 03:32:40 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_sapphire
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.2 p95 (2015-04-13)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy-2.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015;
+        root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 30 Jun 2015 03:32:41 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_6WI42pEs5txDIv
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "total_count": 0,
+          "has_more": false,
+          "url": "/v1/customers",
+          "data": []
+        }
+    http_version: 
+  recorded_at: Tue, 30 Jun 2015 03:32:41 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_ruby
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.2 p95 (2015-04-13)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ivy-2.local 14.3.0 Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015;
+        root:xnu-2782.20.48~5/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 30 Jun 2015 03:32:41 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '12736'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_6WI4Fw9sbURyEW
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "total_count": 2,
+          "has_more": true,
+          "url": "/v1/customers",
+          "data": [
+            {
+              "object": "customer",
+              "created": 1435552677,
+              "id": "cus_6VvtoGAz7B9hfA",
+              "livemode": false,
+              "description": null,
+              "email": "mail@arko.net",
+              "delinquent": false,
+              "metadata": {},
+              "subscriptions": {
+                "object": "list",
+                "total_count": 11,
+                "has_more": true,
+                "url": "/v1/customers/cus_6VvtoGAz7B9hfA/subscriptions",
+                "data": [
+                  {
+                    "id": "sub_6VyNZ79RpMRvQ5",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Friend of Ruby Together",
+                      "created": 1433963947,
+                      "amount": 1000,
+                      "currency": "usd",
+                      "id": "friend",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1435561884,
+                    "status": "active",
+                    "customer": "cus_6VvtoGAz7B9hfA",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1435561884,
+                    "current_period_end": 1438153884,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_6VxdYMCONitqZy",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Emerald Member",
+                      "created": 1433963948,
+                      "amount": 80000,
+                      "currency": "usd",
+                      "id": "corporate",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1435559135,
+                    "status": "active",
+                    "customer": "cus_6VvtoGAz7B9hfA",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1435559135,
+                    "current_period_end": 1438151135,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_6VxcH5lGdgaj0Q",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Emerald Member",
+                      "created": 1433963948,
+                      "amount": 80000,
+                      "currency": "usd",
+                      "id": "corporate",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1435559068,
+                    "status": "active",
+                    "customer": "cus_6VvtoGAz7B9hfA",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1435559068,
+                    "current_period_end": 1438151068,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_6VxbBDcWNQ9QFD",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Member",
+                      "created": 1433963948,
+                      "amount": 500000,
+                      "currency": "usd",
+                      "id": "corporate_ruby",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1435559038,
+                    "status": "active",
+                    "customer": "cus_6VvtoGAz7B9hfA",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1435559038,
+                    "current_period_end": 1438151038,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_6Vxav5NzaSMVY1",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Member",
+                      "created": 1433963948,
+                      "amount": 500000,
+                      "currency": "usd",
+                      "id": "corporate_ruby",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1435558960,
+                    "status": "active",
+                    "customer": "cus_6VvtoGAz7B9hfA",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1435558960,
+                    "current_period_end": 1438150960,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_6VxPP1sCQDCIMo",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Member",
+                      "created": 1433963948,
+                      "amount": 500000,
+                      "currency": "usd",
+                      "id": "corporate_ruby",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1435558337,
+                    "status": "active",
+                    "customer": "cus_6VvtoGAz7B9hfA",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1435558337,
+                    "current_period_end": 1438150337,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_6VxOcXjHiuOzgl",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Member",
+                      "created": 1433963948,
+                      "amount": 500000,
+                      "currency": "usd",
+                      "id": "corporate_ruby",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1435558253,
+                    "status": "active",
+                    "customer": "cus_6VvtoGAz7B9hfA",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1435558253,
+                    "current_period_end": 1438150253,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_6VxNhAmxk4dhBi",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Member",
+                      "created": 1433963948,
+                      "amount": 500000,
+                      "currency": "usd",
+                      "id": "corporate_ruby",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1435558196,
+                    "status": "active",
+                    "customer": "cus_6VvtoGAz7B9hfA",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1435558196,
+                    "current_period_end": 1438150196,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_6VxMi2GvaDO4pE",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Member",
+                      "created": 1433963948,
+                      "amount": 500000,
+                      "currency": "usd",
+                      "id": "corporate_ruby",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1435558143,
+                    "status": "active",
+                    "customer": "cus_6VvtoGAz7B9hfA",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1435558143,
+                    "current_period_end": 1438150143,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  },
+                  {
+                    "id": "sub_6VxMdGnUk73YUn",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Ruby Member",
+                      "created": 1433963948,
+                      "amount": 500000,
+                      "currency": "usd",
+                      "id": "corporate_ruby",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1435558109,
+                    "status": "active",
+                    "customer": "cus_6VvtoGAz7B9hfA",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1435558109,
+                    "current_period_end": 1438150109,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "discount": null,
+              "account_balance": 0,
+              "currency": "usd",
+              "sources": {
+                "object": "list",
+                "total_count": 1,
+                "has_more": false,
+                "url": "/v1/customers/cus_6VvtoGAz7B9hfA/sources",
+                "data": [
+                  {
+                    "id": "card_16IwQEAcWgwn5pBtPU8LfP8V",
+                    "object": "card",
+                    "last4": "4242",
+                    "brand": "Visa",
+                    "funding": "credit",
+                    "exp_month": 2,
+                    "exp_year": 2022,
+                    "fingerprint": "Jus3vECqxH1Ctmdh",
+                    "country": "US",
+                    "name": "mail@arko.net",
+                    "address_line1": null,
+                    "address_line2": null,
+                    "address_city": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_country": null,
+                    "cvc_check": null,
+                    "address_line1_check": null,
+                    "address_zip_check": null,
+                    "tokenization_method": null,
+                    "dynamic_last4": null,
+                    "metadata": {},
+                    "customer": "cus_6VvtoGAz7B9hfA"
+                  }
+                ]
+              },
+              "default_source": "card_16IwQEAcWgwn5pBtPU8LfP8V"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Tue, 30 Jun 2015 03:32:41 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_onyx
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ray.local 15.0.0 Darwin Kernel Version 15.0.0: Wed Aug 26 16:57:32 PDT 2015;
+        root:xnu-3247.1.106~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 03 Oct 2015 03:04:41 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2843'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_75s47yQn1Ij4Xz
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "total_count": 1,
+          "has_more": false,
+          "url": "/v1/customers",
+          "data": [
+            {
+              "object": "customer",
+              "created": 1442344988,
+              "id": "cus_6zNmRrC7sFTNk8",
+              "livemode": false,
+              "description": null,
+              "email": "mail@arko.net",
+              "shipping": null,
+              "delinquent": false,
+              "metadata": {},
+              "subscriptions": {
+                "object": "list",
+                "total_count": 1,
+                "has_more": false,
+                "url": "/v1/customers/cus_6zNmRrC7sFTNk8/subscriptions",
+                "data": [
+                  {
+                    "id": "sub_6zNmkOo306EOek",
+                    "plan": {
+                      "interval": "month",
+                      "name": "Onyx Memberbership",
+                      "created": 1442299784,
+                      "amount": 5000,
+                      "currency": "usd",
+                      "id": "corporate_onyx",
+                      "object": "plan",
+                      "livemode": false,
+                      "interval_count": 1,
+                      "trial_period_days": null,
+                      "metadata": {},
+                      "statement_descriptor": null
+                    },
+                    "object": "subscription",
+                    "start": 1442344990,
+                    "status": "active",
+                    "customer": "cus_6zNmRrC7sFTNk8",
+                    "cancel_at_period_end": false,
+                    "current_period_start": 1442344990,
+                    "current_period_end": 1444936990,
+                    "ended_at": null,
+                    "trial_start": null,
+                    "trial_end": null,
+                    "canceled_at": null,
+                    "quantity": 1,
+                    "application_fee_percent": null,
+                    "discount": null,
+                    "tax_percent": null,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "discount": null,
+              "account_balance": 0,
+              "currency": "usd",
+              "sources": {
+                "object": "list",
+                "total_count": 1,
+                "has_more": false,
+                "url": "/v1/customers/cus_6zNmRrC7sFTNk8/sources",
+                "data": [
+                  {
+                    "id": "card_16lP18AcWgwn5pBtmKhJGExO",
+                    "object": "card",
+                    "last4": "1881",
+                    "brand": "Visa",
+                    "funding": "credit",
+                    "exp_month": 2,
+                    "exp_year": 2018,
+                    "fingerprint": "dBrlSqX27dskxDCe",
+                    "country": "US",
+                    "name": "mail@arko.net",
+                    "address_line1": null,
+                    "address_line2": null,
+                    "address_city": null,
+                    "address_state": null,
+                    "address_zip": null,
+                    "address_country": null,
+                    "cvc_check": null,
+                    "address_line1_check": null,
+                    "address_zip_check": null,
+                    "tokenization_method": null,
+                    "dynamic_last4": null,
+                    "metadata": {},
+                    "customer": "cus_6zNmRrC7sFTNk8"
+                  }
+                ]
+              },
+              "default_source": "card_16lP18AcWgwn5pBtmKhJGExO"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Sat, 03 Oct 2015 03:04:40 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_emerald
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ray.local 15.0.0 Darwin Kernel Version 15.0.0: Wed Aug 26 16:57:32 PDT 2015;
+        root:xnu-3247.1.106~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 03 Oct 2015 03:04:41 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_75s4SBplDQepoF
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "total_count": 0,
+          "has_more": false,
+          "url": "/v1/customers",
+          "data": []
+        }
+    http_version: 
+  recorded_at: Sat, 03 Oct 2015 03:04:40 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_jade
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        ray.local 15.0.0 Darwin Kernel Version 15.0.0: Wed Aug 26 16:57:32 PDT 2015;
+        root:xnu-3247.1.106~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sat, 03 Oct 2015 03:04:41 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_75s4bv74xu5Eja
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "total_count": 0,
+          "has_more": false,
+          "url": "/v1/customers",
+          "data": []
+        }
+    http_version: 
+  recorded_at: Sat, 03 Oct 2015 03:04:41 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_onyx
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:32:13 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf5ra0ji4mX2d
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:32:13 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_emerald
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:32:13 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf5tltrpE5q08
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:32:14 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_jade
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:32:13 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf51GhdUKkZ3R
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:32:14 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_ruby
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:32:14 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf5FkJTenY6AL
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:32:14 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_sapphire
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:32:14 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf5hCQJ2xEEmO
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:32:14 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_topaz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:32:14 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf503I2EWSpOe
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:32:15 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=friend
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:32:14 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf52I2f8Zm3Wv
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:32:15 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=individual
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:32:15 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf5a9FKJFXe62
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:32:15 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_onyx
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:03 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf9O5RuVeHa2Q
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:03 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_emerald
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:03 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf9aiPqpWoDR6
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:04 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_jade
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:03 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf9tfZZrAOyJK
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:04 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_ruby
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:03 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf9AwZj6mC1Uq
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:04 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_sapphire
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:04 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf9GDEfebSLoR
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:04 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_topaz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:04 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf9DmreRVmTfK
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:05 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=friend
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:04 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf9oMRCU5KbLZ
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:05 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=individual
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:04 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf9nLVp5LejZX
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:05 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_onyx
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:11 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf97HdCgFmae6
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:12 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_emerald
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:11 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf9ETLOQ9piOE
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:12 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_jade
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:11 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf9LcxIg6Hlb1
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:12 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_ruby
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:12 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf9pfbKz0FpWE
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:12 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_sapphire
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:12 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf9w8gNIi0S8C
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:12 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=corporate_topaz
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:12 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf99V2biOM2Yy
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:13 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=friend
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:12 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf9ZRSlgtGZhW
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:13 GMT
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/customers?include%5B%5D=total_count&limit=1&subscription%5Bplan%5D=individual
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.20.3
+      Authorization:
+      - Bearer sk_test_XtTL5T07vCobwN0oPCOqg6jZ
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.20.3","lang":"ruby","lang_version":"2.2.3 p173 (2015-08-18)","platform":"x86_64-darwin14","publisher":"stripe","uname":"Darwin
+        Rey.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015;
+        root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64"}'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 25 Jan 2016 08:36:12 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_7mf916CtVkuUT3
+      Stripe-Version:
+      - '2015-04-07'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "object": "list",
+          "data": [],
+          "has_more": false,
+          "total_count": 0,
+          "url": "/v1/customers"
+        }
+    http_version: 
+  recorded_at: Mon, 25 Jan 2016 08:36:13 GMT
+recorded_with: VCR 2.9.3
